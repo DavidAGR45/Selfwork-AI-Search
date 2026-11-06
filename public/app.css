@@ -1,0 +1,65 @@
+/* ==========================================================================
+   Info Segugio - Stili Personalizzati Chainlit
+   ========================================================================== */
+
+/* Transizioni fluide al cambio tema */
+*, *::before, *::after {
+    transition: background-color 0.25s ease, border-color 0.25s ease, color 0.2s ease;
+}
+
+/* Tipografia e font smoothing */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    letter-spacing: -0.01em;
+}
+
+/* Avatar styling */
+.cl-avatar, img[alt*="avatar"], img[alt*="assistant"], img[alt*="segugio"] {
+    border-radius: 50% !important;
+    border: 2px solid hsl(var(--primary) / 0.3) !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    object-fit: cover !important;
+}
+
+/* Card e Step di ricerca intermedia (system_assistant) */
+.step {
+    border-radius: calc(var(--radius) - 2px);
+    border: 1px solid hsl(var(--border));
+    background: hsl(var(--card));
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* Messaggi dell'assistente */
+.message-assistant {
+    border-left: 3px solid hsl(var(--primary));
+    padding-left: 1rem;
+    border-radius: 0 var(--radius) var(--radius) 0;
+}
+
+/* Stile per i blocchi di codice e citazioni fonti */
+blockquote {
+    border-left: 3px solid hsl(var(--primary) / 0.6) !important;
+    background: hsl(var(--muted) / 0.3);
+    padding: 0.5rem 1rem !important;
+    border-radius: 0 0.5rem 0.5rem 0;
+}
+
+/* Scrollbar moderna e discreta */
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: hsl(var(--muted-foreground) / 0.3);
+    border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+}
